@@ -15,7 +15,8 @@ RUN apt-get update && \
 
 # Set working directory
 WORKDIR /app
-
+# Copy files from local machine to the working directory in the container
+COPY . /app/
 # Clone the model repository (fancyfeast/llama-joycaption-alpha-two-hf-llava)
 RUN git clone https://huggingface.co/fancyfeast/llama-joycaption-alpha-two-hf-llava /app/model
 
