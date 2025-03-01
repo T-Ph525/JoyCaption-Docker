@@ -1,17 +1,8 @@
-# Core dependencies for running the model
 torch>=1.9.0
 transformers>=4.0.0
 vllm>=0.1.0
-
-# Dependencies for serving the model
 flask>=2.0.0
 uvicorn>=0.14.0
-
-# If the model uses tokenization
 sentencepiece>=0.1.96
-
-# For model data management (if needed)
 datasets>=1.0.0
-
-# Optional: for managing extra requirements
 git+https://github.com/huggingface/transformers.git@main
