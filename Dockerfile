@@ -5,20 +5,10 @@ FROM python:3.9-slim
 ENV LANG=C.UTF-8
 ENV PYTHONUNBUFFERED=1
 
-# Install system dependencies
-RUN apt-get update && \
-    apt-get install -y \
-    git \
-    curl \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
-
 # Set working directory
 WORKDIR /app
 # Copy files from local machine to the working directory in the container
 COPY . /app/
-# Clone the model repository (fancyfeast/llama-joycaption-alpha-two-hf-llava)
-RUN git clone https://huggingface.co/fancyfeast/llama-joycaption-alpha-two-hf-llava /app/model
 
 # Install model-specific requirements
 RUN pip install -r /app/requirements.txt
