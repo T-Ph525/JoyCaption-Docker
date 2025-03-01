@@ -21,7 +21,7 @@ COPY . /app/
 RUN git clone https://huggingface.co/fancyfeast/llama-joycaption-alpha-two-hf-llava /app/model
 
 # Install model-specific requirements
-RUN pip install -r /app/model/requirements.txt
+RUN pip install -r /app/requirements.txt
 
 # Expose the port VLLM will run on
 EXPOSE 5000
