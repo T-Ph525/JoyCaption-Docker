@@ -16,10 +16,6 @@ RUN apt-get update && \
 # Set working directory
 WORKDIR /app
 
-# Install VLLM and other dependencies
-RUN pip install --upgrade pip
-RUN pip install vllm
-
 # Clone the model repository (fancyfeast/llama-joycaption-alpha-two-hf-llava)
 RUN git clone https://huggingface.co/fancyfeast/llama-joycaption-alpha-two-hf-llava /app/model
 
