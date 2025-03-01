@@ -3,13 +3,13 @@ name: Docker
 on:
   push:
     branches: [ "main" ]
-    tags: [ 'v*.*.*' ]
+    tags: [ 'latest' ]
   pull_request:
     branches: [ "main" ]
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: mrcuddle111/${{ github.repository }}
+  IMAGE_NAME: mrcuddle111/JoyCaption-Docker
 
 jobs:
   build:
