@@ -19,4 +19,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Run the model using vLLM with appropriate options
-CMD ["vllm", "serve", "fancyfeast/llama-joycaption-alpha-two-hf-llava", "--max-model-len", "4096", "--enable-prefix-caching"]
+CMD ["vllm", "serve", "mrcuddle/Lummimaid-v0.2-8B-Llama3.2Vision", "--max-model-len", "4096", "--enable-prefix-caching"]
